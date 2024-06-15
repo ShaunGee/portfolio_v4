@@ -26,13 +26,70 @@
     font-family: "Avenir Next", "Avenir", sans-serif;
     }
 
+    nav{
+        height: 100px;
+    }
+    
+    section{
+        height: 100vh;
+    }
+
     h1{
         color: var(--musterd_light);
         font-family: "Alexandria", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
+        font-size: 40px;
+        margin: 0;
     }
+
+    h2{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    h3{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 15px;
+        margin: 0;
+    }
+
+    #hp_hero_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+    }
+
+    #hp_hero_section h1{
+
+        margin: 40px 0 10px 0;
+        text-align: center;
+    }
+
+
+    #hp_hero_section img{
+        width: 300px;
+        height: 300px;
+        margin-block: 30px;
+    }
+
+    #hp_projects_section{
+        background-color: var(--musterd_light);
+    }
+
+    
 
     #menuToggle
     {
@@ -40,7 +97,7 @@
     position: relative;
     top: 50px;
     left: 50px;
-    
+    width: 100px;
     z-index: 1;
     
     -webkit-user-select: none;
