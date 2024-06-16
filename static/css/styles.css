@@ -89,7 +89,29 @@
         background-color: var(--musterd_light);
     }
 
+    footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
     
+    footer div{
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer div div{
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    /* HAMBURGER MENU STYLES START */
 
     #menuToggle
     {
@@ -235,31 +257,9 @@
 
 }
 
-footer{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-}
-
-footer div{
-    width: 50%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-footer div div{
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 10px;
-}
-
 /* tablet */
 
-@media only screen and (min-width: 769px) and (max-width: 1440px) {
+@media only screen and (min-width: 769px) and (max-width: 1540px) {
     body
     {
         margin: 0;
@@ -271,17 +271,46 @@ footer div div{
         font-family: "Avenir Next", "Avenir", sans-serif;
     }
 
+    section{
+        height: 100vh;
+    }
+
     h1{
         color: var(--musterd_light);
         font-family: "Alexandria", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
+        font-size: 40px;
+        margin: 0;
+    }
+
+    h2{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    h3{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 15px;
+        margin: 0;
     }
 
     nav{
         width: 100%;
     }
+
+
+    
 
     #menuToggle
     {
@@ -303,8 +332,7 @@ footer div div{
     #menuToggle a
     {
         text-decoration: none;
-        color: var(--musterd_light);
-        
+        color: var(--white);      
         transition: color 0.3s ease;
     }
 
@@ -318,14 +346,194 @@ footer div div{
     {
     display: none;
     }
+
+
+    #hp_hero_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+    }
+
+    #hp_hero_section h1{
+
+        margin: 40px 0 10px 0;
+        text-align: center;
+    }
+
+
+    #hp_hero_section img{
+        width: 300px;
+        height: 300px;
+        margin-block: 30px;
+    }
+
+    #hp_projects_section{
+        background-color: var(--musterd_light);
+    }
+
+    footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    footer div{
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer div div{
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
     
 }
 
-
-
-
-
 /* computer */
-@media only screen and (min-width: 1440px) {
- 
+@media only screen and (min-width: 1540px) {
+ body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        
+        /* make it look decent enough */
+        background: var(--bg_colour);
+        font-family: "Avenir Next", "Avenir", sans-serif;
+    }
+
+    section{
+        height: 100vh;
+    }
+
+    h1{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 70px;
+        margin: 0;
+    }
+
+    h2{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 45px;
+        margin: 0;
+    }
+
+    h3{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+
+    
+
+    #menuToggle
+    {
+        width: 95%;
+      
+
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 5%;
+        list-style-type: none;
+        font-size: 20px;
+    }
+
+    #menuToggle a
+    {
+        text-decoration: none;
+        color: var(--white);      
+        transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover
+    {
+    color: var(--musterd_dark);
+    }
+
+
+    #menuToggle input
+    {
+    display: none;
+    }
+
+
+    #hp_hero_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+    }
+
+    #hp_hero_section h1{
+
+        margin: 100px 0 10px 0;
+        text-align: center;
+    }
+
+
+    #hp_hero_section img{
+        width: 300px;
+        height: 300px;
+        margin-block: 30px;
+    }
+
+    #hp_projects_section{
+        background-color: var(--musterd_light);
+    }
+
+    footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    footer div{
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer div div{
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+
 }
