@@ -26,9 +26,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='home'),
     path('projects', include('projects.urls', namespace='projects')),
-    path('mainframe/', views.login, name='login'),
     path("ckeditor5/", include('django_ckeditor_5.urls')),
-    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+    path('mainframe/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

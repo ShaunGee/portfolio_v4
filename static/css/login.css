@@ -12,7 +12,7 @@
 
 }
 
-p,h1,h2,h3,h4{
+p,h1,h2,h3,h4, ul{
     font-family: "Alexandria", sans-serif;
 }
 
@@ -39,7 +39,6 @@ form p{
 }
 
 form p label{
-    background-color: var(--musterd_dark)!important;
     font-size: 20px;
     display: flex;
     flex-direction: column;
@@ -57,4 +56,12 @@ form button{
     color: var(--musterd_light);
     border-radius: 40px;
     font-size: 20px;
+}
+
+form ul{
+    list-style-type: none;
+    color: var(--maroonish);
+    font-size: 15px;
+    text-align: center;
+    
 }
