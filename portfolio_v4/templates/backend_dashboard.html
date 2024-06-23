@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href= {% static "css/backend_dashboard.css" %}>
+{% endblock stylesheet %}
+
+
+{% block body_content %}
+
+    <div id='backend_dashboard_container'>
+
+        <h1>Applications</h1>
+
+        <div id='backend_dashboard_app_card_container'>
+            {% for installed_app_title, installed_app_description in apps.items %}
+                <div class = 'backend_dashboard_app_card'> 
+                    <h3>{{ installed_app_title }}</h3>
+                    <p>{{ installed_app_description}}</p>
+                
+                
+                </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+{% endblock body_content %}
+
+

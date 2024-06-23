@@ -1,0 +1,32 @@
+:root{
+    --bg_colour: #1E426B;
+    
+    --musterd_light:#F79940;
+    --musterd_dark:#ED892B;
+    --maroonish: #5F0F40;
+
+    --white: #cdcdcd;
+    --black: #232323;
+
+    --nav_hover_colour: green;
+
+}
+/* mobile */
+@media only screen and (max-width: 768px) {
+    /* mobile content goes here */
+
+}
+
+/* tablet */
+
+@media only screen and (min-width: 769px) and (max-width: 1540px) {
+/* tablet content goes here */
+}
+
+/* computer */
+@media only screen and (min-width: 1540px) {
+
+    /* computer content goes here */
+    
+}
+

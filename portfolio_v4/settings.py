@@ -14,6 +14,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 
+LOGIN_URL = 'http://127.0.0.1:8000/mainframe/'
+
 
 load_dotenv()
 
