@@ -13,19 +13,37 @@
 }
 /* mobile */
 @media only screen and (max-width: 768px) {
+    p,h1,h2,h3,h4, ul, button{
+        font-family: "Alexandria", sans-serif;
+    }
+    h1,h2,h3{
+        color: var(--maroonish);
+    }
     /* mobile content goes here */
+
 
 }
 
 /* tablet */
 
 @media only screen and (min-width: 769px) and (max-width: 1540px) {
+    p,h1,h2,h3,h4, ul, button{
+        font-family: "Alexandria", sans-serif;
+    }
+    h1,h2,h3{
+        color: var(--maroonish);
+    }
 /* tablet content goes here */
 }
 
 /* computer */
 @media only screen and (min-width: 1540px) {
-
+    p,h1,h2,h3,h4, ul, button{
+        font-family: "Alexandria", sans-serif;
+    }
+    h1,h2,h3{
+        color: var(--maroonish);
+    }
     /* computer content goes here */
     
 }

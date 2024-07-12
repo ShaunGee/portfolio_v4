@@ -12,6 +12,9 @@
 
 }
 
+/* mobile */
+@media only screen and (max-width: 768px) {
+
 p,h1,h2,h3,h4, ul{
     font-family: "Alexandria", sans-serif;
 }
@@ -48,7 +51,7 @@ form p label{
 }
 
 form button{
-    margin: 0 45% 0 45%;
+    margin: 0 30% 0 30%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -63,5 +66,130 @@ form ul{
     color: var(--maroonish);
     font-size: 15px;
     text-align: center;
+    
+}
+
+}
+
+/* tablet */
+
+@media only screen and (min-width: 769px) and (max-width: 1540px) {
+    /* tablet content goes here */
+    p,h1,h2,h3,h4, ul{
+        font-family: "Alexandria", sans-serif;
+    }
+    
+    form{
+        padding: 100px 0 0 0;
+        background-color: var(--musterd_light);
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    
+    form h2{
+        color:var(--maroonish);
+        text-align: center;
+    }
+    
+    form p{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 35px;  
+    }
+    
+    form p label{
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: var(--maroonish);
+        margin: 0 5px 0 0;
+    }
+    
+    form button{
+        margin: 0 45% 0 45%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: var(--bg_colour);
+        color: var(--musterd_light);
+        border-radius: 40px;
+        font-size: 20px;
+    }
+    
+    form ul{
+        list-style-type: none;
+        color: var(--maroonish);
+        font-size: 15px;
+        text-align: center;
+        
+    }
+
+}
+
+
+/* computer */
+@media only screen and (min-width: 1540px) {
+
+    /* computer content goes here */
+
+    p,h1,h2,h3,h4, ul{
+        font-family: "Alexandria", sans-serif;
+    }
+    
+    form{
+        padding: 100px 0 0 0;
+        background-color: var(--musterd_light);
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    
+    form h2{
+        color:var(--maroonish);
+        text-align: center;
+    }
+    
+    form p{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 35px;  
+    }
+    
+    form p label{
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: var(--maroonish);
+        margin: 0 5px 0 0;
+    }
+    
+    form button{
+        margin: 0 45% 0 45%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: var(--bg_colour);
+        color: var(--musterd_light);
+        border-radius: 40px;
+        font-size: 20px;
+    }
+    
+    form ul{
+        list-style-type: none;
+        color: var(--maroonish);
+        font-size: 15px;
+        text-align: center;
+        
+    }
+
     
 }

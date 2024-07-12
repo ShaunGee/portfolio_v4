@@ -21,7 +21,7 @@ from . import views
 app_name = 'projects'
 
 urlpatterns = [
-    path('', views.projects_landing_page, name='projects_landing_page'),
+    path('', views.Project_landing_page.as_view(), name='projects_landing_page'),
     
     
 ]
