@@ -14,7 +14,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 
-LOGIN_URL = 'http://127.0.0.1:8000/mainframe/'
+LOGIN_URL = 'http://127.0.0.1:8000/login/'
 
 
 load_dotenv()
@@ -33,7 +33,6 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '192.168.1.104',
   
 ]
 

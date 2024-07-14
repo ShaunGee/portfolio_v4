@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href= {% static "css/backend_form_blog_project_base.css" %}>
+{% endblock stylesheet %}
+
+
+{% block body_content %}
+
+    <div class="backend_form_blog_project_base_container">
+
+        <form class='backend_form' action="post">
+
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+{% endblock body_content %}

@@ -13,6 +13,13 @@ class Project_landing_page(View):
     
     def get(self,request):
         form = forms.ProjectsForm()
-        return render(request, 'projects_landing_page.html', {'projectForm':form})
+        return render(request, 'projects/projects_landing_page.html', {'projectForm':form})
     
+
+
+class Create_Project(View):
+    
+    def get(self, request):
+        form = forms.CreateProjectForm()
+        return render(request, 'form_templates/backend_form_blog_project_base.html', {'form': form})
     

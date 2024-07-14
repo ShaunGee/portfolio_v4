@@ -14,12 +14,14 @@
 
         <div id='backend_dashboard_app_card_container'>
             {% for installed_app_title, installed_app_description in apps.items %}
-                <div class = 'backend_dashboard_app_card'> 
+                <a href={% url installed_app_description.link %}>
+                    <div class = 'backend_dashboard_app_card'> 
                     <h3>{{ installed_app_title }}</h3>
-                    <p>{{ installed_app_description}}</p>
+                    <p>{{ installed_app_description.description}}</p>
                 
                 
-                </div>
+                    </div>
+                </a>
             {% endfor %}
 
 

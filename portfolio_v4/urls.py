@@ -25,10 +25,11 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='home'),
-    path('backend/projects', include('projects.urls', namespace='projects')),
+    path('mainframe/projects/', include('projects.urls', namespace='projects')),
     path("ckeditor5/", include('django_ckeditor_5.urls')),
-    path('mainframe/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
-    path('backend/', views.backend_dashboard, name='backend_dashboard'),
+    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+    path('mainframe/', views.backend_dashboard, name='mainframe'),
+    path('mainframe/blogs/', include('blog.urls', namespace='blogs')),
    
     
     
