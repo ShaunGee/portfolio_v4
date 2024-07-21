@@ -25,32 +25,6 @@
     }
     /* mobile content goes here */
 
-    .backend_form_blog_project_base_container{
-        width: 100%;
-        height: auto;
-        background-color: var(--musterd_light);
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-    
-    }
-    
-    .backend_form_blog_project_base_container h1{
-        margin: 50px 0 50px 0;
-        text-align: center;
-    }
-    
-    .backend_form{
-        width: 80%;
-        height: auto;
-        background-color: var(--musterd_dark);
-        margin: 0 0 30px 0; 
-    }
-    
-    
-    
-
 
 }
 
@@ -79,18 +53,11 @@
 
 }
 
-.backend_form_blog_project_base_container h1{
-    margin: 50px 0 50px 0;
-    text-align: center;
-}
-
 .backend_form{
     width: 80%;
     height: auto;
     background-color: var(--musterd_dark);
 }
-
-
 
 
 }
@@ -108,31 +75,6 @@
         color: inherit; /* This makes the link inherit the color of its parent element */
     }
     /* computer content goes here */
-
-    .backend_form_blog_project_base_container{
-        width: 100%;
-        height: auto;
-        background-color: var(--musterd_light);
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-    
-    }
-    
-    .backend_form_blog_project_base_container h1{
-        margin: 50px 0 50px 0;
-        text-align: center;
-    }
-    
-    .backend_form{
-        width: 80%;
-        height: auto;
-        background-color: var(--musterd_dark);
-    }
-    
-    
-    
     
 }
 

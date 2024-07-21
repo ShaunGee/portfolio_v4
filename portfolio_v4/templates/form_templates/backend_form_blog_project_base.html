@@ -10,13 +10,17 @@
 
     <div class="backend_form_blog_project_base_container">
 
+       <h1> {% block form_page_title %}form_page_title{% endblock form_page_title %} </h1>
+
         <form class='backend_form' action="post">
 
             {% csrf_token %}
             {{form.as_p}}
+            {{form.media}}
 
             <button type="submit">Submit</button>
         </form>
     </div>
 
 {% endblock body_content %}
+

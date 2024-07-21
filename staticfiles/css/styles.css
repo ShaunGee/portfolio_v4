@@ -1,0 +1,539 @@
+:root{
+    --bg_colour: #1E426B;
+    
+    --musterd_light:#F79940;
+    --musterd_dark:#ED892B;
+    --maroonish: #5F0F40;
+
+    --white: #cdcdcd;
+    --black: #232323;
+
+    --nav_hover_colour: green;
+
+}
+
+
+/* mobile */
+@media only screen and (max-width: 768px) {
+
+    body
+    {
+    margin: 0;
+    padding: 0;
+    
+    /* make it look decent enough */
+    background: var(--bg_colour);
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    }
+
+    nav{
+        height: 100px;
+    }
+    
+    section{
+        height: 100vh;
+    }
+
+    h1{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 40px;
+        margin: 0;
+    }
+
+    h2{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    h3{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 15px;
+        margin: 0;
+    }
+
+    #hp_hero_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+    }
+
+    #hp_hero_section h1{
+
+        margin: 40px 0 10px 0;
+        text-align: center;
+    }
+
+
+    #hp_hero_section img{
+        width: 300px;
+        height: 300px;
+        margin-block: 30px;
+    }
+
+    #hp_projects_section{
+        background-color: var(--musterd_light);
+    }
+
+    footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    footer div{
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer div div{
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    /* HAMBURGER MENU STYLES START */
+
+    #menuToggle
+    {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+    }
+
+    #menuToggle a
+    {
+    text-decoration: none;
+    color: var(--musterd_light);
+    
+    transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover
+    {
+    color: var(--musterd_dark);
+    }
+
+
+    #menuToggle input
+    {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    
+    cursor: pointer;
+    
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    
+    -webkit-touch-callout: none;
+    }
+
+    /*
+    * Just a quick hamburger
+    */
+    #menuToggle span
+    {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: var(--white);
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child
+    {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2)
+    {
+        transform-origin: 0% 100%;
+    }
+
+    /* 
+    * Transform all the slices of hamburger
+    * into a crossmark.
+    */
+    #menuToggle input:checked ~ span
+    {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: var(--black);
+    }
+
+    /*
+    * But let's hide the middle one.
+    */
+    #menuToggle input:checked ~ span:nth-last-child(3)
+    {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+    * Ohyeah and the last one should go the other direction
+    */
+    #menuToggle input:checked ~ span:nth-last-child(2)
+    {
+    transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+    * Make this absolute positioned
+    * at the top left of the screen
+    */
+    #menu
+    {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    
+    background: var(--nav_white_colour);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    #menu li
+    {
+    padding: 10px 0;
+    font-size: 22px;
+    }
+
+    /*
+    * And let's slide it in from the left
+    */
+    #menuToggle input:checked ~ ul
+    {
+    transform: none;
+    }
+
+}
+
+/* tablet */
+
+@media only screen and (min-width: 769px) and (max-width: 1540px) {
+    body
+    {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        
+        /* make it look decent enough */
+        background: var(--bg_colour);
+        font-family: "Avenir Next", "Avenir", sans-serif;
+    }
+
+    section{
+        height: 100vh;
+    }
+
+    h1{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 40px;
+        margin: 0;
+    }
+
+    h2{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    h3{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 15px;
+        margin: 0;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+
+    
+
+    #menuToggle
+    {
+        width: 95%;
+      
+
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 5%;
+        list-style-type: none;
+    }
+
+    #menuToggle a
+    {
+        text-decoration: none;
+        color: var(--white);      
+        transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover
+    {
+    color: var(--musterd_dark);
+    }
+
+
+    #menuToggle input
+    {
+    display: none;
+    }
+
+
+    #hp_hero_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+    }
+
+    #hp_hero_section h1{
+
+        margin: 40px 0 10px 0;
+        text-align: center;
+    }
+
+
+    #hp_hero_section img{
+        width: 300px;
+        height: 300px;
+        margin-block: 30px;
+    }
+
+    #hp_projects_section{
+        background-color: var(--musterd_light);
+    }
+
+    footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    footer div{
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer div div{
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    
+}
+
+/* computer */
+@media only screen and (min-width: 1540px) {
+ body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        
+        /* make it look decent enough */
+        background: var(--bg_colour);
+        font-family: "Avenir Next", "Avenir", sans-serif;
+    }
+
+    section{
+        height: 100vh;
+    }
+
+    h1{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 70px;
+        margin: 0;
+    }
+
+    h2{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 45px;
+        margin: 0;
+    }
+
+    h3{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+
+    
+
+    #menuToggle
+    {
+        width: 95%;
+      
+
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 5%;
+        list-style-type: none;
+        font-size: 20px;
+    }
+
+    #menuToggle a
+    {
+        text-decoration: none;
+        color: var(--white);      
+        transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover
+    {
+    color: var(--musterd_dark);
+    }
+
+
+    #menuToggle input
+    {
+    display: none;
+    }
+
+
+    #hp_hero_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+    }
+
+    #hp_hero_section h1{
+
+        margin: 100px 0 10px 0;
+        text-align: center;
+    }
+
+
+    #hp_hero_section img{
+        width: 300px;
+        height: 300px;
+        margin-block: 30px;
+    }
+
+    #hp_projects_section{
+        background-color: var(--musterd_light);
+    }
+
+    footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    footer div{
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer div div{
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+
+}

@@ -21,5 +21,5 @@ class Create_Project(View):
     
     def get(self, request):
         form = forms.CreateProjectForm()
-        return render(request, 'form_templates/backend_form_blog_project_base.html', {'form': form})
+        return render(request, 'projects/projects_create_form_page.html', {'form': form})
     
