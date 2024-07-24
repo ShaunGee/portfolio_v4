@@ -22,7 +22,7 @@ app_name = 'projects'
 
 urlpatterns = [
     path('', views.Project_landing_page.as_view(), name='projects_landing_page'),
-    path('create/',views.Create_Project.as_view(), name='project_create'),
+    path('create/',views.Create_Project.as_view(), name='projects_create_form'),
     
     
 ]

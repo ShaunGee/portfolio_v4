@@ -10,7 +10,7 @@
 <div id="container">
 
     <h2>{% block backend_page_title %}backend_page_title{% endblock backend_page_title %}</h2>
-    <button>{% block create_button_text %}create_button_text{% endblock create_button_text %}</button>
+    <button onclick="window.location.href='{% block url_to_form_page %}{% endblock url_to_form_page %}'">{% block create_button_text %}create_button_text{% endblock create_button_text %}</button>
     <div id="project_tiles_container">
         {% block app_tiles %}
             <div class="test"></div>
@@ -27,4 +27,3 @@
 
 
 {% endblock body_content %}
-
