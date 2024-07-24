@@ -2,7 +2,7 @@ from django.db import models
 from django_ckeditor_5.fields import CKEditor5Field
 from django.contrib.auth.models import AbstractUser
 
-# Create your models here.
+# Create your models here
 class Project_artical(models.Model):
     project_artical_id = models.AutoField(primary_key=True)
     project_artical_title = models.CharField(max_length=100)

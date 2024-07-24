@@ -9,5 +9,6 @@ class BlogsDashboard(views.View):
     
     
 class CreateBlog(views.View):
+    
     def get(self, request):
         return(render(request, 'blogs/blog_create_form_page.html'))

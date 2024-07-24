@@ -12,15 +12,17 @@
 
        <h1> {% block form_page_title %}form_page_title{% endblock form_page_title %} </h1>
 
-        <form class='backend_form' action="post">
+        <form class='backend_form' action="" method="post">
 
             {% csrf_token %}
             {{form.as_p}}
             {{form.media}}
 
-            <button type="submit">Submit</button>
+            <button type="Submit">Submit</button>
         </form>
     </div>
 
 {% endblock body_content %}
+
+
 

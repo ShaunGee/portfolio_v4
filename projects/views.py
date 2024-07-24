@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
 from .models import *
 from . import forms
@@ -10,6 +10,8 @@ from . import forms
 
 
 class Project_landing_page(View):
+    template_name = 'projects/landingpage.html'
+    
     
     def get(self,request):
         form = forms.ProjectsForm()
@@ -19,6 +21,16 @@ class Project_landing_page(View):
 
 class Create_Project(View):
     
+    def post(self, request):
+        print('print activated')
+        form = forms.CreateProjectForm(request.POST)
+        if form.is_valid():
+            print('form saved')
+            form.save()
+            
+            return redirect("projects:projects_landing_page")
+        return redirect('https://www.google.com')
+
     def get(self, request):
         form = forms.CreateProjectForm()
         return render(request, 'projects/projects_create_form_page.html', {'form': form})
