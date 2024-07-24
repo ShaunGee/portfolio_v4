@@ -1,5 +1,6 @@
 from django import views
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import CreateBlogForm
 
 # Create your views here.
 
@@ -10,5 +11,14 @@ class BlogsDashboard(views.View):
     
 class CreateBlog(views.View):
     
+    def post(self, request):
+        form = CreateBlogForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('blogs:blogs_dashboard')
+        return redirect('https://www.google.com')
+    
+    
     def get(self, request):
-        return(render(request, 'blogs/blog_create_form_page.html'))
+        form = CreateBlogForm
+        return(render(request, 'blogs/blog_create_form_page.html', {'form':form}))

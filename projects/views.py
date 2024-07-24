@@ -21,11 +21,9 @@ class Project_landing_page(View):
 
 class Create_Project(View):
     
-    def post(self, request):
-        print('print activated')
+    def post(self, request):       
         form = forms.CreateProjectForm(request.POST)
         if form.is_valid():
-            print('form saved')
             form.save()
             
             return redirect("projects:projects_landing_page")
