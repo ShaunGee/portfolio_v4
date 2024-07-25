@@ -3,6 +3,7 @@
 
 {% block stylesheet %}
 <link rel="stylesheet" href= {% static "css/backend_landing_page_base.css" %}>
+<link rel="stylesheet" href= {% static "css/generic_tile.css" %} >
 {% endblock stylesheet %}
 
 {% block body_content %}
@@ -13,14 +14,11 @@
     <button onclick="window.location.href='{% block url_to_form_page %}{% endblock url_to_form_page %}'">{% block create_button_text %}create_button_text{% endblock create_button_text %}</button>
     <div id="project_tiles_container">
         {% block app_tiles %}
-            <div class="test"></div>
-            <div class="test"></div>
-            <div class="test"></div>
-            <div class="test"></div>
-            <div class="test"></div>
-            <div class="test"></div>
+
         {% endblock app_tiles %}
-    </div>
+
+    </div> 
+   
 
 </div>
 

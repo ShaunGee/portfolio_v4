@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from portfolio_v4 import settings
+from django.conf.urls.static import static
 
 app_name = 'projects'
 

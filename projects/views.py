@@ -14,15 +14,19 @@ class Project_landing_page(View):
     
     
     def get(self,request):
+        model = Project_artical.objects.all()
         form = forms.ProjectsForm()
-        return render(request, 'projects/projects_landing_page.html', {'projectForm':form})
+        return render(request, 'projects/projects_landing_page.html', 
+                      {'projectForm':form,
+                       'model':model
+                       })
     
 
 
 class Create_Project(View):
     
     def post(self, request):       
-        form = forms.CreateProjectForm(request.POST)
+        form = forms.CreateProjectForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             

@@ -1,0 +1,144 @@
+:root{
+    --bg_colour: #1E426B;
+    
+    --musterd_light:#F79940;
+    --musterd_dark:#ED892B;
+    --maroonish: #5F0F40;
+
+    --white: #cdcdcd;
+    --black: #232323;
+
+    --nav_hover_colour: green;
+
+}
+/* mobile */
+@media only screen and (max-width: 768px) {
+    p,h1,h2,h3,h4, ul, button{
+        font-family: "Alexandria", sans-serif;
+    }
+    h1,h2,h3{
+        color: var(--maroonish);
+    }
+    a {
+        text-decoration: none;
+        color: inherit; /* This makes the link inherit the color of its parent element */
+    }
+    /* mobile content goes here */
+
+    #project_tiles_container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+        margin: 0 0 50px 0;
+        align-content: center;
+        
+        
+
+    }
+
+    .tile{
+        width: 300px;
+        height:300px;
+        margin: 5px;;
+        background-color: var(--musterd_dark);
+    }
+
+
+}
+
+/* tablet */
+
+@media only screen and (min-width: 769px) and (max-width: 1540px) {
+    p,h1,h2,h3,h4, ul, button{
+        font-family: "Alexandria", sans-serif;
+    }
+    h1,h2,h3{
+        color: var(--maroonish);
+    }
+    a {
+        text-decoration: none;
+        color: inherit; /* This makes the link inherit the color of its parent element */
+    }
+/* tablet content goes here */
+
+#project_tiles_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin: 0 0 50px 0;
+    justify-content: center;
+    
+    
+
+}
+
+.tile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 20%;
+    height:500px;
+    margin: 5px;;
+    background-color: var(--musterd_dark);
+}
+
+.tile img{
+    width: 85%;
+    height: auto;
+    margin: 30px 0 0 0 ;
+}
+
+}
+
+/* computer */
+@media only screen and (min-width: 1540px) {
+    p,h1,h2,h3,h4, ul, button{
+        font-family: "Alexandria", sans-serif;
+    }
+    h1,h2,h3{
+        color: var(--maroonish);
+    }
+    a {
+        text-decoration: none;
+        color: inherit; /* This makes the link inherit the color of its parent element */
+    }
+    /* computer content goes here */
+
+    #project_tiles_container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        margin: 0 0 50px 0;
+        justify-content: center;
+        
+        
+    
+    }
+    
+    .tile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        width: 20%;
+        height:500px;
+        margin: 5px;;
+        background-color: var(--musterd_dark);
+    }
+    
+    .tile img{
+        width: 85%;
+        height: auto;
+        margin: 30px 0 0 0 ;
+    }
+ 
+    
+}
+

@@ -44,25 +44,7 @@
        
     }
 
-    #project_tiles_container{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-flow: column;
-        flex-wrap: wrap;
-        margin: 0 0 50px 0;
-        align-content: center;
-        
-        
 
-    }
-
-    .test{
-        width: 300px;
-        height:300px;
-        margin: 5px;;
-        background-color: var(--musterd_dark);
-    }
 
 
 
@@ -101,24 +83,7 @@
     
     }
 
-    #project_tiles_container{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-flow: row;
-        flex-wrap: wrap;
-        margin: 0 0 50px 0;
-        
-        
 
-    }
-
-    .test{
-        width: 20%;
-        height:500px;
-        margin: 5px;;
-        background-color: var(--musterd_dark);
-    }
 }
 
 
@@ -165,26 +130,7 @@
        
     }
 
-    #project_tiles_container{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-flow: row;
-        flex-wrap: wrap;
-        margin: 0 0 50px 0;
-        
-        
 
-    }
-
-    .test{
-        width: 20%;
-        height:500px;
-        margin: 5px;;
-        background-color: var(--musterd_dark);
-    }
-
- 
 
     
 }

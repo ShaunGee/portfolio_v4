@@ -7,3 +7,8 @@
 {% block create_button_text %}Create Project{% endblock create_button_text %}
 
 {% block url_to_form_page %}{% url "projects:projects_create_form" %}{% endblock url_to_form_page %}
+
+{% block app_tiles %}
+    {% include "generic_tile_base.html" %}
+{% endblock app_tiles %}
+

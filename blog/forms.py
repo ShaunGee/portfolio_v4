@@ -11,5 +11,6 @@ class CreateBlogForm(forms.ModelForm):
             'blog_id',
             'blog_title',
             'blog_subheadeing',
-            'blog_body'
+            'blog_body',
+            'blog_tile_img'
         ]

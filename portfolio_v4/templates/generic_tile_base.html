@@ -1,0 +1,16 @@
+
+
+<div id="project_tiles_container">
+
+    {% for project in model %}
+        <div class="tile">
+            <img src= "{{ project.project_artical_image.url }}">
+            <h2> {{project.project_artical_title}} </h2>
+            <h3> {{project.project_artical_subheadeing}} </h3>
+        </div>
+    {% endfor %}
+
+
+    
+
+</div> 

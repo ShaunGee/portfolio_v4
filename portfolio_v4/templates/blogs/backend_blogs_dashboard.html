@@ -5,3 +5,22 @@
 {% block create_button_text %}Create Post{% endblock create_button_text %}
 
 {% block url_to_form_page %}{% url "blogs:blogs_create_form" %}{% endblock url_to_form_page %}
+
+{% block app_tiles %}
+
+<div id="project_tiles_container">
+
+    {% for blog in model %}
+        <div class="tile">
+            <img src= "{{ blog.blog_tile_img.url }}">
+            <h2> {{blog.blog_title}} </h2>
+            <h3> {{blog.blog_subheadeing}} </h3>
+        </div>
+    {% endfor %}
+
+
+    
+
+</div> 
+
+{% endblock app_tiles %}
