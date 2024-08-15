@@ -25,91 +25,11 @@
     background: var(--bg_colour);
     font-family: "Avenir Next", "Avenir", sans-serif;
     }
-
     nav{
         height: 100px;
     }
-    
-    section{
-        height: 100vh;
-    }
 
-    h1{
-        color: var(--musterd_light);
-        font-family: "Alexandria", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 40px;
-        margin: 0;
-    }
-
-    h2{
-        color: var(--musterd_light);
-        font-family: "Alexandria", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 25px;
-        margin: 0;
-    }
-
-    h3{
-        color: var(--musterd_light);
-        font-family: "Alexandria", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 15px;
-        margin: 0;
-    }
-
-    #hp_hero_section{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-
-    }
-
-    #hp_hero_section h1{
-
-        margin: 40px 0 10px 0;
-        text-align: center;
-    }
-
-
-    #hp_hero_section img{
-        width: 300px;
-        height: 300px;
-        margin-block: 30px;
-    }
-
-    #hp_projects_section{
-        background-color: var(--musterd_light);
-    }
-
-    footer{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    footer div{
-        width: 50%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    footer div div{
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 10px;
-    }
+ 
 
     /* HAMBURGER MENU STYLES START */
 
@@ -239,6 +159,10 @@
     transform: translate(-100%, 0);
     
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    background-color: var(--purple);
+    opacity: 0.93;
+    border-radius: 10px;
+   
     }
 
     #menu li
@@ -255,12 +179,40 @@
     transform: none;
     }
 
+
+    /* footer */
+
+
+    footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    footer div{
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer div div{
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+
 }
 
 /* tablet */
 
 @media only screen and (min-width: 769px) and (max-width: 1540px) {
-    body
+
+        body
     {
         margin: 0;
         padding: 0;
@@ -271,46 +223,10 @@
         font-family: "Avenir Next", "Avenir", sans-serif;
     }
 
-    section{
-        height: 100vh;
-    }
-
-    h1{
-        color: var(--musterd_light);
-        font-family: "Alexandria", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 40px;
-        margin: 0;
-    }
-
-    h2{
-        color: var(--musterd_light);
-        font-family: "Alexandria", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 25px;
-        margin: 0;
-    }
-
-    h3{
-        color: var(--musterd_light);
-        font-family: "Alexandria", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 15px;
-        margin: 0;
-    }
 
     nav{
         width: 100%;
     }
-
-
-    
 
     #menuToggle
     {
@@ -348,31 +264,7 @@
     }
 
 
-    #hp_hero_section{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-
-    }
-
-    #hp_hero_section h1{
-
-        margin: 40px 0 10px 0;
-        text-align: center;
-    }
-
-
-    #hp_hero_section img{
-        width: 300px;
-        height: 300px;
-        margin-block: 30px;
-    }
-
-    #hp_projects_section{
-        background-color: var(--musterd_light);
-    }
-
+   
     footer{
         width: 100%;
         height: auto;
@@ -400,7 +292,10 @@
 
 /* computer */
 @media only screen and (min-width: 1540px) {
- body{
+
+
+
+    body{
         margin: 0;
         padding: 0;
         width: 100%;
@@ -410,46 +305,11 @@
         font-family: "Avenir Next", "Avenir", sans-serif;
     }
 
-    section{
-        height: 100vh;
-    }
 
-    h1{
-        color: var(--musterd_light);
-        font-family: "Alexandria", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 70px;
-        margin: 0;
-    }
-
-    h2{
-        color: var(--musterd_light);
-        font-family: "Alexandria", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 45px;
-        margin: 0;
-    }
-
-    h3{
-        color: var(--musterd_light);
-        font-family: "Alexandria", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 25px;
-        margin: 0;
-    }
 
     nav{
         width: 100%;
     }
-
-
-    
 
     #menuToggle
     {
@@ -488,30 +348,7 @@
     }
 
 
-    #hp_hero_section{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
 
-    }
-
-    #hp_hero_section h1{
-
-        margin: 100px 0 10px 0;
-        text-align: center;
-    }
-
-
-    #hp_hero_section img{
-        width: 300px;
-        height: 300px;
-        margin-block: 30px;
-    }
-
-    #hp_projects_section{
-        background-color: var(--musterd_light);
-    }
 
     footer{
         width: 100%;

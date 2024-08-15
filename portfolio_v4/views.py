@@ -7,6 +7,19 @@ from . import webapps
 def index(request):
     return render(request, 'home.html')
 
+def about(request):
+    return render(request, 'frontend/about.html')
+
+def blogs(request):
+    return render(request, 'frontend/blogs.html')
+
+def projects(request):
+    return render(request, 'frontend/projects.html')
+
+def contact(request):
+    return render(request, 'frontend/contact.html')
+
+
 
 def login(request):
     return render(request, 'login.html')

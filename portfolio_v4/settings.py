@@ -33,7 +33,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-  #'192.168.1.104',
+  '192.168.1.104',
 ]
 
 
@@ -86,6 +86,7 @@ TEMPLATES = [
 #added
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR,'portfolio_v4/static'),
 ]
 
 WSGI_APPLICATION = 'portfolio_v4.wsgi.application'

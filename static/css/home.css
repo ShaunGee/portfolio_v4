@@ -1,0 +1,615 @@
+:root{
+    --bg_colour: #1E426B;
+    
+    --musterd_light:#F79940;
+    --musterd_dark:#ED892B;
+    --maroonish: #5F0F40;
+
+    --white: #cdcdcd;
+    --black: #232323;
+
+    --nav_hover_colour: green;
+
+    --purple: #404969;
+
+    --skill_bar_colour: #3388FF;
+
+}
+/* mobile */
+@media only screen and (max-width: 768px) {
+    p,h1,h2,h3,h4, ul, button{
+        font-family: "Alexandria", sans-serif;
+    }
+    h1,h2,h3{
+        color: var(--maroonish);
+    }
+    a {
+        text-decoration: none;
+        color: inherit; /* This makes the link inherit the color of its parent element */
+    }
+    /* mobile content goes here */
+
+
+ 
+    section{
+        height: 100vh;
+    }
+    
+    h1{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 70px;
+        margin: 25px 0 25px 0;
+    }
+    
+    h2{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 45px;
+        margin: 0;
+    }
+    
+    h3{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 25px;
+        margin: 0;
+    }
+    
+    
+    #hp_hero_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    
+    }
+    
+    #hp_hero_section h1{
+    
+        margin: 10px 0 10px 0;
+        text-align: center;
+    }
+    
+    
+    #hp_hero_section img{
+        width: 400px;
+        height: 400px;
+        
+    }
+    
+    #hero_more_link{
+        margin: 50px 0 0 0;
+        color: var(--musterd_dark);
+    }
+    
+    
+    
+    #hp_projects_section{
+       
+        background-color: var(--musterd_light);
+    
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    #hp_projects_section h1, h3{
+        color: var(--maroonish);
+    }
+    
+    #projects_container{
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    #projects_container div{
+        width: 30%;
+        height: 500px;
+        background-color: var(--musterd_dark);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    #projects_container div img{
+        background-color: #6d6d6d;
+        width: 200px;
+        height: 200px;
+    }
+    
+    #hp_skills_section{
+        background-color: var(--purple);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height:auto;
+    }
+    
+    #skills_container{
+        width: 95%;
+        height: auto;
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+    }
+    
+    .skill_box{
+        width: 100%;
+        margin: 50px 10px 50px 10px;
+        height: auto;
+        display: flex;
+        flex-flow: column;
+        justify-content:flex-start
+    }
+    
+    .skill_box h2{
+        margin: 0 0 25px 0;
+        font-size: 35px;
+     
+    }
+    
+    .skill{
+        margin: 0 0 20px 0;
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    
+    }
+    .skill_name{
+        color: var(--musterd_dark);
+        width: 50%;
+        margin: 0 0 0 0;
+        font-size: 20px;
+        
+    }
+    .html_skill{
+        border-color: var(--skill_bar_colour);
+        background-color: var(--skill_bar_colour);
+        width: 20%;
+        height: 2px;
+        margin: 0 0 0 30px;
+    
+    }
+        
+    
+    #hp_blog_section{
+        display: none;
+    }
+    
+    #web_dev_skill_bar{
+        width: 40%;
+    }
+    
+    #javascript_skill_bar{
+        width: 35%;
+    }
+    
+    #django_skill_bar{
+        width: 35%;
+    }
+    
+    #skill_name_bar{
+        width: 5%;
+    }
+    
+    
+
+}
+
+/* tablet */
+
+@media only screen and (min-width: 769px) and (max-width: 1540px) {
+    p,h1,h2,h3,h4, ul, button{
+        font-family: "Alexandria", sans-serif;
+    }
+    h1,h2,h3{
+        color: var(--maroonish);
+    }
+    a {
+        text-decoration: none;
+        color: inherit; /* This makes the link inherit the color of its parent element */
+    }
+/* tablet content goes here */
+
+
+
+section{
+    height: 100vh;
+}
+
+h1{
+    color: var(--musterd_light);
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+    margin: 0;
+}
+
+h2{
+    color: var(--musterd_light);
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 45px;
+    margin: 0;
+}
+
+h3{
+    color: var(--musterd_light);
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    margin: 0;
+}
+
+
+#hp_hero_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+}
+
+#hp_hero_section h1{
+
+    margin: 10px 0 10px 0;
+    text-align: center;
+}
+
+
+#hp_hero_section img{
+    width: 400px;
+    height: 400px;
+    
+}
+
+#hero_more_link{
+    margin: 50px 0 0 0;
+    color: var(--musterd_dark);
+}
+
+
+
+#hp_projects_section{
+   
+    background-color: var(--musterd_light);
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#hp_projects_section h1, h3{
+    color: var(--maroonish);
+}
+
+#projects_container{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#projects_container div{
+    width: 30%;
+    height: 500px;
+    background-color: var(--musterd_dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#projects_container div img{
+    background-color: #6d6d6d;
+    width: 200px;
+    height: 200px;
+}
+
+#hp_skills_section{
+    background-color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#skills_container{
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.skill_box{
+    width: 40%;
+    margin: 0 10px 0 10px;
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    justify-content:flex-start
+}
+
+.skill_box h2{
+    margin: 0 0 25px 0;
+    font-size: 35px;
+ 
+}
+
+.skill{
+    margin: 0 0 20px 0;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+.skill_name{
+    color: var(--musterd_dark);
+    width: 50%;
+    margin: 0 0 0 0;
+    font-size: 20px;
+    
+}
+.html_skill{
+    border-color: var(--skill_bar_colour);
+    background-color: var(--skill_bar_colour);
+    width: 20%;
+    height: 2px;
+    margin: 0 0 0 30px;
+
+}
+    
+
+#hp_blog_section{
+    display: none;
+}
+
+#web_dev_skill_bar{
+    width: 40%;
+}
+
+#javascript_skill_bar{
+    width: 35%;
+}
+
+#django_skill_bar{
+    width: 35%;
+}
+
+#skill_name_bar{
+    width: 5%;
+}
+
+
+
+}
+
+/* computer */
+@media only screen and (min-width: 1540px) {
+    p,h1,h2,h3,h4, ul, button{
+        font-family: "Alexandria", sans-serif;
+    }
+    h1,h2,h3{
+        color: var(--maroonish);
+    }
+    a {
+        text-decoration: none;
+        color: inherit; /* This makes the link inherit the color of its parent element */
+    }
+    /* computer content goes here */
+
+    section{
+        height: 100vh;
+    }
+
+    h1{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 70px;
+        margin: 0;
+    }
+
+    h2{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 45px;
+        margin: 0;
+    }
+
+    h3{
+        color: var(--musterd_light);
+        font-family: "Alexandria", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 25px;
+        margin: 0;
+    }
+
+
+    #hp_hero_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+    }
+
+    #hp_hero_section h1{
+
+        margin: 100px 0 10px 0;
+        text-align: center;
+    }
+
+
+    #hp_hero_section img{
+        width: 500px;
+        height: 500px;
+        margin: 30px 0 30px 0;
+    }
+
+    #hero_more_link{
+        margin: 50px 0 0 0;
+        color: var(--musterd_dark);
+    }
+
+
+
+    #hp_projects_section{
+       
+        background-color: var(--musterd_light);
+
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #hp_projects_section h1, h3{
+        color: var(--maroonish);
+    }
+
+    #projects_container{
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    #projects_container div{
+        width: 30%;
+        height: 500px;
+        background-color: var(--musterd_dark);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #projects_container div img{
+        background-color: #6d6d6d;
+        width: 200px;
+        height: 200px;
+    }
+
+    #hp_skills_section{
+        background-color: var(--purple);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #skills_container{
+        width: 95%;
+        height: auto;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: start;
+
+    }
+
+    .skill_box{
+        width: 50%;
+        height: 300px;
+        display: flex;
+        flex-flow: column;
+        justify-content:flex-start
+    }
+
+
+
+    .skill{
+        margin: 5px 0 5px 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+
+    }
+    .skill_name{
+        margin: 0 0 0 0;
+        color: var(--musterd_dark);
+        width: 50%;
+        
+    }
+    .html_skill{
+        border-color: var(--skill_bar_colour);
+        background-color: var(--skill_bar_colour);
+        width: 20%;
+        height: 2px;
+        margin: 0 0 0 30px;
+
+    }
+        
+
+    #hp_blog_section{
+        display: none;
+    }
+
+    #web_dev_skill_bar{
+        width: 40%;
+    }
+
+    #javascript_skill_bar{
+        width: 35%;
+    }
+
+    #django_skill_bar{
+        width: 35%;
+    }
+
+    #skill_name_bar{
+        width: 5%;
+    }
+
+}
+

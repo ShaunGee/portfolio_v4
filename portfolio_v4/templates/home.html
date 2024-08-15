@@ -1,17 +1,102 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href= {% static "css/home.css" %}>
+{% endblock stylesheet %}
 
 {% block body_content %}
 
 <section id="hp_hero_section">
     <h1>My name is Shaun</h1>
     <h2>I make things</h2>
-    <img>
-    <h3>More on Shaun --> </h3>
+    <img src= {% static "landing_page_img.png" %}>
+    <h3 id="hero_more_link">More on Shaun --> </h3>
 
 
 </section>
-<section id="hp_projects_section"></section>
-<section id="hp_skills_section"></section>
-<section id="hp_blog_section"></section>
+<section id="hp_projects_section">
+    <h1>Projects</h1>
+    <div id="projects_container">
+        <div>
+            <img src="" alt="">
+            <h2>Title</h2>
+            <p>Short Description</p>
+        </div>
+
+        <div>
+            <img src="" alt="">
+            <h2>Title</h2>
+            <p>short description</p>
+        </div>
+
+        <div>
+            <img src="" alt="">
+            <h2>Title</h2>
+            <p>short description</p>
+        </div>
+
+
+    </div>
+    <h3>More --></h3>
+
+</section>
+
+
+<section id="hp_skills_section">
+
+    <h1>SKILLS</h1>
+    <div id="skills_container">
+
+        <div class="skill_box">
+            <h2>Front End Development</h2>
+            <div class="skill">
+                <h3 class="skill_name"> Static Web Development (HTML/CSS)</h3>
+                <hr id="web_dev_skill_bar" class="html_skill">
+            </div>
+
+            <div class="skill">
+                <h3 class="skill_name">Javascript</h3>
+                <hr id="javascript_skill_bar" class="html_skill">
+            </div>
+
+
+
+
+        </div>
+
+        <div class="skill_box">
+            <h2>Back End Development</h2>
+            <div class="skill">
+                <h3 class="skill_name">Django</h3>
+                <hr id="django_skill_bar" class="html_skill">
+            </div>
+
+        </div>
+
+        <div class="skill_box">
+            <h2>Electronics</h2>
+            <div class="skill">
+                <h3 class="skill_name">Basics ( still learning :D )</h3>
+                <hr id="skill_name_bar" class="html_skill">
+            </div>
+
+            
+        </div>
+
+
+
+    </div>
+
+
+</section>
+
+
+<section id="hp_blog_section">
+
+    <h1>BLOG</h1>
+    <div id="blogs_container"></div>
+    <h3>More --></h3>
+</section>
 
 {% endblock body_content %}
