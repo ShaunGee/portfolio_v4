@@ -9,7 +9,6 @@
     --black: #232323;
 
     --nav_hover_colour: green;
-    --purple: #404969;
 
 }
 /* mobile */
@@ -26,31 +25,30 @@
     }
     /* mobile content goes here */
 
-    .backend_form_blog_project_base_container{
+    #about_section{
         width: 100%;
         height: auto;
         background-color: var(--musterd_light);
+
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-    
+        align-items: center;
     }
-    
-    .backend_form_blog_project_base_container h1{
-        margin: 50px 0 50px 0;
-        text-align: center;
-    }
-    
-    .backend_form{
+
+    #about_container{
         width: 80%;
-        height: auto;
-        background-color: var(--musterd_dark);
-        margin: 0 0 30px 0; 
+        
+    
     }
-    
-    
-    
+
+    #about_container p{
+        line-height: 2;
+        margin: 20px 0 20px 0;
+    }
+
+    #about_container ul{
+        line-height: 2;
+    }
 
 
 }
@@ -69,30 +67,31 @@
         color: inherit; /* This makes the link inherit the color of its parent element */
     }
 /* tablet content goes here */
-.backend_form_blog_project_base_container{
+
+#about_section{
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-color: var(--musterd_light);
+
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-
+    align-items: center;
 }
 
-.backend_form_blog_project_base_container h1{
-    margin: 50px 0 50px 0;
-    text-align: center;
-}
-
-.backend_form{
+#about_container{
     width: 80%;
-    height: auto;
-    background-color: var(--musterd_dark);
+    
+
 }
 
+#about_container p{
+    line-height: 2;
+    margin: 20px 0 20px 0;
+}
 
-
+#about_container ul{
+    line-height: 2;
+}
 
 }
 
@@ -110,30 +109,29 @@
     }
     /* computer content goes here */
 
-    .backend_form_blog_project_base_container{
+    #about_section{
         width: 100%;
-        height: auto;
+        height: 100vh;
         background-color: var(--musterd_light);
+
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-    
+        align-items: center;
     }
-    
-    .backend_form_blog_project_base_container h1{
-        margin: 50px 0 50px 0;
-        text-align: center;
-    }
-    
-    .backend_form{
-        width: 80%;
-        height: auto;
-        background-color: var(--musterd_dark);
-    }
-    
-    
-    
-    
-}
 
+    #about_container{
+        width: 90%;
+        
+    
+    }
+
+    #about_container p{
+        line-height: 2;
+        margin: 20px 0 20px 0;
+    }
+
+    #about_container ul{
+        line-height: 2;
+    }
+
+}

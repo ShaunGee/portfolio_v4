@@ -33,8 +33,16 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-  '192.168.1.104',
+  #'192.168.1.104',
 ]
+
+if DEBUG == False:
+    ALLOWED_HOSTS = [
+        'www.tropdev.com',
+        'tropdev.com',
+    ]
+    STATIC_URL = '/staticfiles/'
+    
 
 
 # Application definition

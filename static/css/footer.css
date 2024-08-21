@@ -1,0 +1,187 @@
+:root{
+    --bg_colour: #1E426B;
+    
+    --musterd_light:#F79940;
+    --musterd_dark:#ED892B;
+    --maroonish: #5F0F40;
+
+    --white: #cdcdcd;
+    --black: #232323;
+
+    --nav_hover_colour: green;
+
+}
+/* mobile */
+@media only screen and (max-width: 768px) {
+    p,h1,h2,h3,h4, ul, button{
+        font-family: "Alexandria", sans-serif;
+    }
+    h1,h2,h3{
+        color: var(--maroonish);
+    }
+    a {
+        text-decoration: none;
+        color: inherit; /* This makes the link inherit the color of its parent element */
+    }
+    /* mobile content goes here */
+
+
+
+    footer{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .footer_half_container{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #icons_container{
+        justify-content: center;
+    }
+    
+    .footer_half_container div{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 10px;
+        margin: 20px 0 20px 0;
+    }
+
+    .icon_img{
+        width: 40px;
+        height: 40px;
+    }
+
+    #footer_title{
+        color: var(--musterd_light);
+    }
+
+    
+    
+
+
+
+}
+
+/* tablet */
+
+@media only screen and (min-width: 769px) and (max-width: 1540px) {
+    p,h1,h2,h3,h4, ul, button{
+        font-family: "Alexandria", sans-serif;
+    }
+    h1,h2,h3{
+        color: var(--maroonish);
+    }
+    a {
+        text-decoration: none;
+        color: inherit; /* This makes the link inherit the color of its parent element */
+    }
+/* tablet content goes here */
+
+footer{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_half_container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#icons_container{
+    justify-content: center;
+}
+
+.footer_half_container div{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 20px 0 20px 0;
+}
+
+.icon_img{
+    width: 40px;
+    height: 40px;
+}
+
+#footer_title{
+    color: var(--musterd_light);
+}
+
+
+
+
+
+}
+
+/* computer */
+@media only screen and (min-width: 1540px) {
+    p,h1,h2,h3,h4, ul, button{
+        font-family: "Alexandria", sans-serif;
+    }
+    h1,h2,h3{
+        color: var(--maroonish);
+    }
+    a {
+        text-decoration: none;
+        color: inherit; /* This makes the link inherit the color of its parent element */
+    }
+    /* computer content goes here */
+
+
+    footer{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .footer_half_container{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #icons_container{
+        justify-content: center;
+    }
+    
+    .footer_half_container div{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 10px;
+        margin: 20px 0 20px 0;
+    }
+
+    .icon_img{
+        width: 40px;
+        height: 40px;
+    }
+
+    #footer_title{
+        color: var(--musterd_light);
+    }
+
+
+    
+}
+

@@ -9,6 +9,11 @@
     --black: #232323;
 
     --nav_hover_colour: green;
+    --purple: #404969;
+
+    user-select: none;
+
+
 
 }
 
@@ -180,31 +185,6 @@
     }
 
 
-    /* footer */
-
-
-    footer{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    footer div{
-        width: 50%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    footer div div{
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 10px;
-    }
-
 
 }
 
@@ -265,27 +245,6 @@
 
 
    
-    footer{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    footer div{
-        width: 50%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    footer div div{
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 10px;
-    }
 
     
 }
@@ -349,28 +308,6 @@
 
 
 
-
-    footer{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    footer div{
-        width: 50%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    footer div div{
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 10px;
-    }
 
 
 }
