@@ -25,6 +25,7 @@ app_name = 'projects'
 urlpatterns = [
     path('', views.Project_landing_page.as_view(), name='projects_landing_page'),
     path('create/',views.Create_Project.as_view(), name='projects_create_form'),
+    path('<int:pk>/',views.Display_Project_Artical.as_view(), name='display_project_artical'),
     
     
 ]

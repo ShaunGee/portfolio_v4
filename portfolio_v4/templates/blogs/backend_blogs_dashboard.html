@@ -11,11 +11,13 @@
 <div id="project_tiles_container">
 
     {% for blog in model %}
-        <div class="tile">
-            <img src= "{{ blog.blog_tile_img.url }}">
-            <h2> {{blog.blog_title}} </h2>
-            <h3> {{blog.blog_subheadeing}} </h3>
-        </div>
+        <a class="tile_link" href="{% url "blogs:display_artical" blog.pk %}">
+            <div class="tile">
+                <img src= "{{ blog.blog_tile_img.url }}">
+                <h2> {{blog.blog_title}} </h2>
+                <h3> {{blog.blog_subheadeing}} </h3>
+            </div>
+       </a> 
     {% endfor %}
 
 

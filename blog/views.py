@@ -1,17 +1,21 @@
-from django import views
+from django.views import View
 from django.shortcuts import render, redirect
 from .forms import CreateBlogForm
 from .models import Blog_artical
+from django.views.generic import DetailView
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 # Create your views here.
 
-class BlogsDashboard(views.View):
+
+class BlogsDashboard(LoginRequiredMixin, View):
     def get(self,request):
         model = Blog_artical.objects.all()
         return (render(request, "blogs/backend_blogs_dashboard.html", {'model':model}))
     
-    
-class CreateBlog(views.View):
+
+class CreateBlog(LoginRequiredMixin, View):
     
     def post(self, request):
         form = CreateBlogForm(request.POST, request.FILES)
@@ -24,3 +28,9 @@ class CreateBlog(views.View):
     def get(self, request):
         form = CreateBlogForm
         return(render(request, 'blogs/blog_create_form_page.html', {'form':form}))
+    
+    
+class Display_Artical(LoginRequiredMixin, DetailView):
+    model = Blog_artical
+    context_object_name = 'blog_artical'
+    template_name = 'blogs/backend_blog_artical_detail_view.html'

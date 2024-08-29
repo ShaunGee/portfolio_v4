@@ -14,6 +14,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 
+
 LOGIN_URL = 'http://127.0.0.1:8000/login/'
 
 
@@ -36,12 +37,7 @@ ALLOWED_HOSTS = [
   #'192.168.1.104',
 ]
 
-if DEBUG == False:
-    ALLOWED_HOSTS = [
-        'www.tropdev.com',
-        'tropdev.com',
-    ]
-    STATIC_URL = '/staticfiles/'
+
     
 
 
@@ -259,3 +255,11 @@ CKEDITOR_5_CONFIGS = {
 }
 
 #ckeditor 5 config end
+
+if DEBUG == False:
+    ALLOWED_HOSTS = [
+        'www.tropdev.com',
+        'tropdev.com',
+        '192.168.1.104'
+    ]
+    STATIC_URL = '/staticfiles/'

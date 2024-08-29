@@ -3,14 +3,15 @@
 <div id="project_tiles_container">
 
     {% for project in model %}
-        <div class="tile">
+    <a class= "tile_link" href="{% url 'projects:display_project_artical' project.pk %}">
+        <div class="tile" >
             <img src= "{{ project.project_artical_image.url }}">
             <h2> {{project.project_artical_title}} </h2>
             <h3> {{project.project_artical_subheadeing}} </h3>
         </div>
     {% endfor %}
 
-
+    </a>
     
 
 </div> 
