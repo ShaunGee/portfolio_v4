@@ -4,6 +4,7 @@ from .forms import CreateBlogForm
 from .models import Blog_artical
 from django.views.generic import DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.edit import UpdateView
 
 
 # Create your views here.
@@ -34,3 +35,10 @@ class Display_Artical(LoginRequiredMixin, DetailView):
     model = Blog_artical
     context_object_name = 'blog_artical'
     template_name = 'blogs/backend_blog_artical_detail_view.html'
+    
+class Edit_Blog_Artical(LoginRequiredMixin, UpdateView):
+    model = Blog_artical
+    template_name = 'blogs/update_blog_artical.html'
+    fields = '__all__'
+    context_object_name = 'sdfs'
+    

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic import DetailView
+from django.views.generic.edit import UpdateView
 from .models import *
 from . import forms
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -47,3 +48,11 @@ class Display_Project_Artical(LoginRequiredMixin, DetailView):
     
 
      
+class Edit_Project_Artical(LoginRequiredMixin, UpdateView):
+    model = Project_artical
+    fields='__all__'
+    template_name = 'projects/edit_project_artical.html'
+    context_object_name = 'artical_form'
+    
+    
+    
