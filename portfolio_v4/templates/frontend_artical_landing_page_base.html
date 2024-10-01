@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href= {% static "css/backend_landing_page_base.css" %}>
+<link rel="stylesheet" href= {% static "css/generic_tile.css" %} >
+{% endblock stylesheet %}
+
+{% block body_content %}
+
+<div id="container">
+
+    <h2>{% block page_title %}backend_page_title{% endblock page_title %}</h2>
+    
+    <div id="project_tiles_container">
+        {% block app_tiles %}
+
+        {% endblock app_tiles %}
+
+    </div> 
+   
+
+</div>
+
+
+
+{% endblock body_content %}

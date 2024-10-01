@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href= {% static "css/artical_display_template.css" %}>
+{% endblock stylesheet %}
+
+{% block body_content %}
+
+{% if artical_type == 'project' %}
+
+    
+    <h1>{{ object.project_artical_title }}</h1>
+    <p>Description: {{ object.project_artical_subheadeing}}</p>
+    {{ object.project_artical_body|safe}}
+
+
+
+{% elif artical_type == 'blog' %}
+
+
+    <h1>{{ object.blog_title }}</h1>
+    <p>Description: {{ object.blog_subheadeing}}</p>
+    {{ object.blog_body|safe}}
+
+   
+
+{% endif %}
+
+ {% endblock  %}

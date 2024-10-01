@@ -24,11 +24,11 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='home'),
+    path('', views.HomePage.as_view(), name='home'),
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
-    path('blogs/', views.blogs, name='blogs'),
-    path('projects/', views.projects, name='projects'),
+    path('blogs/', views.Blogs.as_view(), name='blogs'),
+    path('projects/', views.Projects.as_view(), name='projects'),
     
     path('mainframe/projects/', include('projects.urls', namespace='projects')),
     path("ckeditor5/", include('django_ckeditor_5.urls')),
@@ -36,7 +36,8 @@ urlpatterns = [
     path('mainframe/', views.backend_dashboard, name='mainframe'),
     path('mainframe/blogs/', include('blog.urls', namespace='blogs')),
    
-    
+    path('projects/<int:pk>/', views.ProjectDetailView.as_view(), name='projectDetailView'),
+    path('blogs/<int:pk>/', views.BlogDetailView.as_view(), name='blogDetailView'),
     
 ] 
 

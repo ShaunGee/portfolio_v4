@@ -11,37 +11,29 @@
     <h1>My name is Shaun</h1>
     <h2>I make things</h2>
     <img src= {% static "landing_page_img.png" %}>
-    <h3 id="hero_more_link">More on Shaun --> </h3>
+    <a href="{% url "about" %}"><h3 id="hero_more_link">More on Shaun --> </h3></a>
 
 
 </section>
-<section id="hp_projects_section">
+<section class="artical_section_container" id="hp_projects_section">
     <h1>Projects</h1>
-    <div id="projects_container">
-        <div>
-            <img src="" alt="">
-            <h2>Title</h2>
-            <p>Short Description</p>
-        </div>
+    <div class="artical_container" id="projects_container">
+        {% for p in  projects%}
+            <a class= "tile_link" href="{% url 'projects:display_project_artical' p.pk %}">
+                <div>
+                    <img src="{{ p.project_artical_image.url }}" alt="{{p.project_artical_subheadeing}}">
+                    <h2>{{p.project_artical_title}}</h2>
+                    <p>{{p.project_artical_subheadeing}}</p>
+                </div>
+            </a>
+        
 
-        <div>
-            <img src="" alt="">
-            <h2>Title</h2>
-            <p>short description</p>
-        </div>
-
-        <div>
-            <img src="" alt="">
-            <h2>Title</h2>
-            <p>short description</p>
-        </div>
-
+        {% endfor %}
 
     </div>
-    <h3>More --></h3>
+    <a class='artical_more_link' id='projects_more_link' href="{% url "projects" %}"><h3>More --></h3></a>
 
 </section>
-
 
 <section id="hp_skills_section">
 
@@ -91,12 +83,29 @@
 
 </section>
 
-
-<section id="hp_blog_section">
-
+<section class="artical_section_container" id="hp_blog_section">
     <h1>BLOG</h1>
-    <div id="blogs_container"></div>
-    <h3>More --></h3>
+    <h3>Here, I throw in my two cents on Tech and Life in general</h3>
+    <div class="artical_container" id="blogs_container">
+        {% for b in  blogs%}
+            <a class= "tile_link" href="{% url 'blogs:display_artical' b.pk %}">
+                <div>
+                    <img src="{{ b.blog_tile_img.url }}" alt="{{b.blog_subheadeing}}">
+                    <h2>{{b.blog_title}}</h2>
+                    <p>{{b.blog_subheadeing}}</p>
+                </div>
+            </a>
+        
+
+        {% endfor %}
+
+    </div>
+    <a class='artical_more_link' id='projects_more_link' href="{% url "blogs" %}"><h3>More --></h3></a>
+    
 </section>
+
+
+
+
 
 {% endblock body_content %}

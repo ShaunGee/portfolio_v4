@@ -54,5 +54,19 @@ class Edit_Project_Artical(LoginRequiredMixin, UpdateView):
     template_name = 'projects/edit_project_artical.html'
     context_object_name = 'artical_form'
     
+
+
+class Home_Page_Project_View(View):
+    def get_queryset(self):
+        q = Project_artical.objects.order_by('-date_added')[:2]
+        return q
     
+    def get(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
+        context = {
+            'project_articals_homepage':queryset,
+        }
+        return render(request, template_name='test.html', context = context)
     
+class FrontendDetailView(DetailView):
+        model = Project_artical

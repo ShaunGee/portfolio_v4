@@ -9,6 +9,8 @@ class Project_artical(models.Model):
     project_artical_subheadeing = models.CharField(max_length=200)
     project_artical_body = CKEditor5Field('Text', config_name='extends')
     project_artical_image = models.ImageField(upload_to='images/', default='default.jpg')
+    project_artical_date_added = models.DateTimeField(auto_now_add=True)
+    project_artical_date_updated = models.DateTimeField(auto_now=True)
     
     def __str__(self):
         return self.project_artical_title

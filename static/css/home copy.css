@@ -94,7 +94,7 @@
     
     
     
-    .artical_section_container{
+    #hp_projects_section{
        
         background-color: var(--musterd_light);
         height: auto;
@@ -104,11 +104,11 @@
         justify-content: space-around;
     }
     
-    .artical_section_container h1, h3{
+    #hp_projects_section h1, h3{
         color: var(--maroonish);
     }
     
-    .artical_container{
+    #projects_container{
         width: 90%;
         height: auto;
         display: flex;
@@ -307,7 +307,7 @@ h3{
 
 
 
-.artical_section_container{
+#hp_projects_section{
    
     background-color: var(--musterd_light);
 
@@ -317,12 +317,12 @@ h3{
     justify-content: space-around;
 }
 
-.artical_section_container h1, h2, h3{
+#hp_projects_section h1, h3{
     color: var(--maroonish);
 }
 
 
-.artical_container{
+#projects_container{
     width: 90%;
     height: auto;
     display: flex;
@@ -513,7 +513,7 @@ h3{
 
 
 
-    .artical_section_container{
+    #hp_projects_section{
        
         background-color: var(--musterd_light);
 
@@ -523,11 +523,11 @@ h3{
         justify-content: space-around;
     }
 
-    .artical_section_container h1, h2,h3{
+    #hp_projects_section h1, h3{
         color: var(--maroonish);
     }
 
-    .artical_container{
+    #projects_container{
         width: 90%;
         height: auto;
         display: flex;
@@ -614,7 +614,7 @@ h3{
     #hp_blog_section{
         display: flex;
         width: 100%;
-
+        
     }
 
 

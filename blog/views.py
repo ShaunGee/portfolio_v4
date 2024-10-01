@@ -41,4 +41,5 @@ class Edit_Blog_Artical(LoginRequiredMixin, UpdateView):
     template_name = 'blogs/update_blog_artical.html'
     fields = '__all__'
     context_object_name = 'sdfs'
-    
+
+

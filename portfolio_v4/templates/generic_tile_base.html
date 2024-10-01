@@ -1,9 +1,10 @@
 
 
-<div id="project_tiles_container">
+{% if view_type == 'projects' %}
 
-    {% for project in model %}
-    <a class= "tile_link" href="{% url 'projects:display_project_artical' project.pk %}">
+<div id="project_tiles_container">
+    {% for project in projects %}
+    <a class= "tile_link" href="{% url 'projectDetailView' project.pk %}">
         <div class="tile" >
             <img src= "{{ project.project_artical_image.url }}">
             <h2> {{project.project_artical_title}} </h2>
@@ -15,3 +16,25 @@
     
 
 </div> 
+
+{% elif view_type == 'blogs' %}
+
+<div id="project_tiles_container">
+    {% for blog in blogs %}
+    <a class= "tile_link" href="{% url 'blogDetailView' blog.pk %}">
+        <div class="tile" >
+            <img src= "{{ blog.blog_tile_img.url }}">
+            <h2> {{blog.blog_title}} </h2>
+            <h3> {{blog.blog_subheadeing}} </h3>
+        </div>
+    {% endfor %}
+
+    </a>
+    
+
+</div> 
+
+
+
+{% endif %}
+
