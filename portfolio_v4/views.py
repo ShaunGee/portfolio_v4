@@ -5,9 +5,12 @@ from django.http import HttpResponse
 from django.contrib.auth.views import LoginView,LogoutView
 from django.contrib.auth.decorators import login_required
 from . import webapps
-from django.views.generic import TemplateView, DetailView
+from django.views.generic import TemplateView, DetailView, FormView
 from projects.models import Project_artical
 from blog.models import Blog_artical
+from .forms import ContactForm
+from django.core.mail import send_mail
+from django.conf import settings
 
 def index(request):
     return render(request, 'home.html')
@@ -80,3 +83,21 @@ class BlogDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context["artical_type"] = 'blog'
         return context
+    
+class ContactView(FormView):
+    form_class = ContactForm
+    template_name = "frontend/contact.html"
+    success_url = 'https://www.google.com'
+    
+    def form_valid(self, form):
+        name = form.cleaned_data['name']
+        email = form.cleaned_data['email']
+        message = form.cleaned_data['message']
+        
+        subject = f'Contact Form Submission from {name}'
+        body = f'Name: {name}\nEmail: {email}\n\nMessage:\n{message}'
+        
+        send_mail(subject,body,settings.EMAIL_HOST_USER,[settings.EMAIL_HOST_USER])
+        
+        return super().form_valid(form)
+    
