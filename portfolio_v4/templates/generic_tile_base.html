@@ -95,37 +95,42 @@
 {% elif access == 'front_end_brief' and blog_brief %}
 <div id="project_tiles_container">
     {% for blog in blogs %}
-    <a class= "tile_link" href="{% url 'blogs:BackEndBlogDetailView' blog.pk %}">
-        <div class="tile" >
-            <img src= "{{ blog.blog_tile_img.url }}">
-            <h2> {{blog.blog_title}} </h2>
-            <h3> {{blog.blog_subheadeing}} </h3>
-        </div>
+     <div class="tile_container">
+        <a class= "tile_link" href="{% url 'blogs:BackEndBlogDetailView' blog.pk %}">
+            <div class="tile" >
+                <img src= "{{ blog.blog_tile_img.url }}">
+                <h2> {{blog.blog_title}} </h2>
+                <h3> {{blog.blog_subheadeing}} </h3>
+            </div>
+        </a>
+    </div>
     {% endfor %}
-    </a>
+    
     
 
 </div> 
 
 {% elif  access == 'front_end_brief' and project_brief %}
-{{ blog_brief }}
 <div id="project_tiles_container">
     {% for project in projects %}
-    <a class= "tile_link" href="{% url 'projects:BackEndProjectDetailView' project.pk %}">
-        <div class="tile" >
-            <img src= "{{ project.project_artical_image.url }}">
-            <h2> {{project.project_artical_title}} </h2>
-            <h3> {{project.project_artical_subheadeing}} </h3>
-        </div>
+    <div class="tile_container">
+        <a class= "tile_link" href="{% url 'projects:BackEndProjectDetailView' project.pk %}">
+            <div class="tile" >
+                <img src= "{{ project.project_artical_image.url }}">
+                <h2> {{project.project_artical_title}} </h2>
+                <h3> {{project.project_artical_subheadeing}} </h3>
+            </div>
+
+        </a>
+    </div>
     {% endfor %}
 
-    </a>
+   
     
 
 </div> 
 
 {% endif %}
-{{ view_type }}
 
 <script>
 

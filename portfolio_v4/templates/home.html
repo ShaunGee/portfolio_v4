@@ -18,7 +18,9 @@
 </section>
 <section class="artical_section_container" id="hp_projects_section">
     <h1>Projects</h1>
-    {% include "generic_tile_base.html" with project_brief=True %}
+    
+        {% include "generic_tile_base.html" with project_brief=True %}
+   
     <a class='artical_more_link' id='projects_more_link' href="{% url "projects" %}"><h3>More --></h3></a>
 
 </section>
@@ -74,8 +76,9 @@
 <section class="artical_section_container" id="hp_blog_section">
     <h1>BLOG</h1>
     <h3>Here, I throw in my two cents on Tech and Life in general</h3>
+    
         {% include "generic_tile_base.html" with blog_brief=True %}
-
+    
 
     <a class='artical_more_link' id='projects_more_link' href="{% url "blogs" %}"><h3>More --></h3></a>
     
