@@ -41,6 +41,7 @@ class HomePage(TemplateView):
     
     def get_context_data(self, **kwargs):
         context =  super().get_context_data(**kwargs)
+        context['access'] = 'front_end_brief'
         context['projects'] = Project_artical.objects.order_by('-project_artical_date_added')[:2]
         context['blogs'] = Blog_artical.objects.order_by('-blog_artical_date_added')[:2]
         return context
@@ -52,6 +53,7 @@ class Projects(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['view_type'] = 'projects'
+        context['access'] = 'front_end'
         context['projects'] = Project_artical.objects.all()
         return context
     
@@ -62,6 +64,7 @@ class Blogs(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['view_type'] = 'blogs'
+        context['access'] = 'front_end'
         context['blogs'] = Blog_artical.objects.all()
         return context
     

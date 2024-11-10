@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,get_object_or_404
 from django.views import View
+from django.http import JsonResponse
 from django.views.generic import DetailView
 from django.views.generic.edit import UpdateView
 from .models import *
@@ -13,15 +14,16 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class Project_landing_page(LoginRequiredMixin, View):
-    template_name = 'projects/landingpage.html'
-    
-    
+    template_name = 'projects/projects_landing_page.html'
+
     def get(self,request):
         model = Project_artical.objects.all()
         form = forms.ProjectsForm()
-        return render(request, 'projects/projects_landing_page.html', 
+        return render(request, self.template_name, 
                       {'projectForm':form,
-                       'model':model
+                       'projects':model,
+                       'view_type': 'projects',
+                       'access' : 'back_end',
                        })
     
 
@@ -70,3 +72,13 @@ class Home_Page_Project_View(View):
     
 class FrontendDetailView(DetailView):
         model = Project_artical
+        
+class DeleteArtical(View):
+    def post(self, request, pk):
+        print('shaun')
+        print(pk)
+        delObj = get_object_or_404(Project_artical, pk=pk)
+        delObj.delete()
+        return JsonResponse({'success': True})
+    
+    

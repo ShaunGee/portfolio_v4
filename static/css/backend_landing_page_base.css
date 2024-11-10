@@ -30,11 +30,19 @@
         align-items: center;
     }
 
-    #container h2{
-        margin: 50px 0 50px 0;
+    #container h1{
+        font-size: 60px;
+        font-weight: 330;
+        text-align: center;
+        margin: 100px 0 0 0;
+
     }
 
-    #container button{
+    #container h2{
+        margin: 20px 0 50px 0;
+    }
+
+    #backend_create_button{
         width: 50%;
         height: 100px;
         margin: 0 0 50px 0;
@@ -87,11 +95,19 @@
         align-items: center;
     }
 
-    #container h2{
-        margin: 50px 0 50px 0;
+    #container h1{
+        font-size: 60px;
+        font-weight: 330;
+        text-align: center;
+        margin: 100px 0 0 0;
+
     }
 
-    #container button{
+    #container h2{
+        margin: 20px 0 50px 0;
+    }
+
+    #backend_create_button{
         width: 15%;
         height: 100px;
         margin: 0 0 50px 0;
@@ -151,11 +167,19 @@
         align-items: center;
     }
 
-    #container h2{
-        margin: 50px 0 50px 0;
+    #container h1{
+        font-size: 60px;
+        font-weight: 330;
+        text-align: center;
+        margin: 100px 0 0 0;
+
     }
 
-    #container button{
+    #container h2{
+        margin: 20px 0 50px 0;
+    }
+
+    #backend_create_button{
         width: 10%;
         height: 100px;
         margin: 0 0 50px 0;

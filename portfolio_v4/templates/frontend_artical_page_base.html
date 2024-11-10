@@ -9,20 +9,25 @@
 
 {% if artical_type == 'project' %}
 
+    <div class="artical_headers">
+        <h1>{{ object.project_artical_title }}</h1>
+        <h2>Description: {{ object.project_artical_subheadeing}}</h2>
+        
+    </div>
+    <div class="artical_body">
+        {{ object.project_artical_body|safe}}    
+    </div>
     
-    <h1>{{ object.project_artical_title }}</h1>
-    <p>Description: {{ object.project_artical_subheadeing}}</p>
-    {{ object.project_artical_body|safe}}
-
 
 
 {% elif artical_type == 'blog' %}
 
-
-    <h1>{{ object.blog_title }}</h1>
-    <p>Description: {{ object.blog_subheadeing}}</p>
+    <div>
+        <h1>{{ object.blog_title }}</h1>
+        <h3>Description: {{ object.blog_subheadeing}}</h3>
+        
+    </div>
     {{ object.blog_body|safe}}
-
    
 
 {% endif %}

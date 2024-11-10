@@ -30,7 +30,7 @@ urlpatterns = [
     path('blogs/', views.Blogs.as_view(), name='blogs'),
     path('projects/', views.Projects.as_view(), name='projects'),
     
-    path('mainframe/projects/', include('projects.urls', namespace='projects')),
+    path('mainframe/projects/', include('projects.urls', namespace='projectsBackend')),
     path("ckeditor5/", include('django_ckeditor_5.urls')),
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('mainframe/', views.backend_dashboard, name='mainframe'),

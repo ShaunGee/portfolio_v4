@@ -1,10 +1,117 @@
 
-
-{% if view_type == 'projects' %}
+{% if view_type == 'projects' and access == 'front_end' %}
 
 <div id="project_tiles_container">
     {% for project in projects %}
-    <a class= "tile_link" href="{% url 'projectDetailView' project.pk %}">
+    <div class="tile_container">
+        <a class= "tile_link" href="{% url 'projectDetailView' project.pk %}">
+            <div class="tile" >
+                <img src= "{{ project.project_artical_image.url }}">
+                <h2> {{project.project_artical_title}} </h2>
+                <h3> {{project.project_artical_subheadeing}} </h3>
+            </div>
+        </a>
+    </div>
+      
+    {% endfor %}
+
+    
+    
+
+</div> 
+
+{% elif view_type == 'blogs' and access == 'front_end' %}
+
+<div id="project_tiles_container">
+    {% for blog in blogs %}
+    <div class="tile_container">
+        <a class= "tile_link" href="{% url 'blogDetailView' blog.pk %}">
+            <div class="tile" >
+                <img src= "{{ blog.blog_tile_img.url }}">
+                <h2> {{blog.blog_title}} </h2>
+                <h3> {{blog.blog_subheadeing}} </h3>
+            </div>
+        </a>    
+    </div>
+    {% endfor %}
+
+    
+
+</div> 
+
+{% elif view_type == 'blogs' and access == 'back_end' %}
+
+<div id="project_tiles_container" data-view_type="{{ view_type }}">
+    {% for blog in blogs %}
+    <div class="tile_container">
+        <a class= "tile_link" href="{% url 'blogs:BackEndBlogDetailView' blog.pk %}">
+            <div class="tile" >
+                <img src= "{{ blog.blog_tile_img.url }}">
+                <h2> {{blog.blog_title}} </h2>
+                <h3> {{blog.blog_subheadeing}} </h3>
+                
+            </div>
+
+        </a>
+            <div class="backend_buttons_container">
+                <button class="backend_buttons" id="backend_edit_button" onclick="window.location.href='{% url 'blogs:edit_display_artical' blog.pk %}'" >Edit</button>
+                <button class="backend_buttons" id="backend_delete_button" data-id="{{ blog.pk }}" onclick="deleteArtical(this)">Delete</button>
+            </div>
+    </div>   
+    {% endfor %}
+
+    
+    
+
+</div> 
+
+{% elif view_type == 'projects' and access == 'back_end' %}
+
+<div id="project_tiles_container" data-view_type="{{ view_type }}">
+    {% for project in projects %}
+    <div class="tile_container">
+        <a class= "tile_link" href="{% url 'projects:BackEndProjectDetailView' project.pk %}"">
+            <div class="tile" >
+                <img src= "{{ project.project_artical_image.url }}">
+                <h2> {{project.project_artical_title}} </h2>
+                <h3> {{project.project_artical_subheadeing}} </h3>
+                
+                
+            </div>
+        </a>
+            <div class="backend_buttons_container">
+                <button class="backend_buttons" id="backend_edit_button" onclick="window.location.href='{% url 'projects:project_artical_edit_view' project.pk %}'">Edit</button>
+                <button class="backend_buttons" id="backend_delete_button" data-id="{{ project.pk }}" onclick="deleteArtical(this)">Delete</button>
+            </div>
+
+    </div>
+    {% endfor %}
+
+    
+    
+
+</div> 
+
+{% elif access == 'front_end_brief' and blog_brief %}
+<div id="project_tiles_container">
+    {% for blog in blogs %}
+    <a class= "tile_link" href="{% url 'blogs:BackEndBlogDetailView' blog.pk %}">
+        <div class="tile" >
+            <img src= "{{ blog.blog_tile_img.url }}">
+            <h2> {{blog.blog_title}} </h2>
+            <h3> {{blog.blog_subheadeing}} </h3>
+        </div>
+    {% endfor %}
+    </a>
+    
+
+</div> 
+
+{% elif  access == 'front_end_brief' and project_brief %}
+{{ blog_brief }}
+<div id="project_tiles_container">
+    {% for project in projects %}
+    <a class= "tile_link" href="{% url 'projects:BackEndProjectDetailView' project.pk %}">
         <div class="tile" >
             <img src= "{{ project.project_artical_image.url }}">
             <h2> {{project.project_artical_title}} </h2>
@@ -17,24 +124,49 @@
 
 </div> 
 
-{% elif view_type == 'blogs' %}
+{% endif %}
+{{ view_type }}
 
-<div id="project_tiles_container">
-    {% for blog in blogs %}
-    <a class= "tile_link" href="{% url 'blogDetailView' blog.pk %}">
-        <div class="tile" >
-            <img src= "{{ blog.blog_tile_img.url }}">
-            <h2> {{blog.blog_title}} </h2>
-            <h3> {{blog.blog_subheadeing}} </h3>
-        </div>
-    {% endfor %}
+<script>
 
-    </a>
+    function deleteArtical(button){
+        const view_type = document.getElementById('project_tiles_container').getAttribute('data-view_type')
+        let url;
+        if (view_type === "projects"){
+            url = "{% url 'projects:projects_landing_page' %}"
+
+        }else if(view_type === "blogs"){
+            url = "{% url 'blogs:blogs_dashboard' %}"
+        }
+        console.log(url)
+        if (!confirm("Are you sure you want to delete this item?")) {
+            return; 
+        }
+        const articleId = button.getAttribute('data-id')
+        const tileContainer = button.closest('.tile_container');
+        console.log(articleId)
+       
+
+        // Send a delete request to the Django view
+        fetch(`${url}${articleId}/delete`, {
+            method: 'POST', // Use the POST method for deleting
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}', // CSRF token for security
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json()) // Convert the response to JSON
+        .then(data => {
+            if (data.success) {
+                tileContainer.remove(); // Remove the project tile from the page if successful
+            } else {
+                alert("Could not delete the article."); // Show an error if the delete failed
+            }
+        })
+        .catch(error => console.error('Error:', error)); // Log any errors to the console
     
 
-</div> 
+    }
 
 
-
-{% endif %}
-
+</script>

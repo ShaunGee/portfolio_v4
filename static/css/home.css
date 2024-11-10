@@ -29,7 +29,9 @@
     }
     /* mobile content goes here */
 
-
+    .landing_header{
+        color: var(--musterd_light);
+    }
  
     section{
         height: 100vh;
@@ -43,6 +45,7 @@
         font-style: normal;
         font-size: 70px;
         margin: 25px 0 25px 0;
+        
     }
     
     h2{
@@ -173,6 +176,7 @@
     .skill_box h2{
         margin: 0 0 25px 0;
         font-size: 35px;
+        color: var(--musterd_light);
      
     }
     
@@ -241,6 +245,10 @@
         color: inherit; /* This makes the link inherit the color of its parent element */
     }
 /* tablet content goes here */
+
+.landing_header{
+    color: var(--musterd_light);
+}
 
 
 
@@ -382,6 +390,7 @@ h3{
 .skill_box h2{
     margin: 0 0 25px 0;
     font-size: 35px;
+    color: var(--musterd_light);
  
 }
 
@@ -452,6 +461,10 @@ h3{
 
     section{
         height: 100vh;
+    }
+
+    .landing_header{
+        color: var(--musterd_light);
     }
 
     h1{
@@ -581,6 +594,13 @@ h3{
         display: flex;
         flex-flow: column;
         justify-content:flex-start
+    }
+
+    .skill_box h2{
+        margin: 0 0 25px 0;
+        font-size: 35px;
+        color: var(--musterd_light);
+     
     }
 
 

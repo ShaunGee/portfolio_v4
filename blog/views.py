@@ -1,5 +1,6 @@
 from django.views import View
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,get_object_or_404
+from django.http import JsonResponse
 from .forms import CreateBlogForm
 from .models import Blog_artical
 from django.views.generic import DetailView
@@ -13,7 +14,11 @@ from django.views.generic.edit import UpdateView
 class BlogsDashboard(LoginRequiredMixin, View):
     def get(self,request):
         model = Blog_artical.objects.all()
-        return (render(request, "blogs/backend_blogs_dashboard.html", {'model':model}))
+        return (render(request, "blogs/backend_blogs_dashboard.html", 
+                       {'blogs':model,
+                        'view_type':'blogs',
+                        'access' : 'back_end',
+                        }))
     
 
 class CreateBlog(LoginRequiredMixin, View):
@@ -43,3 +48,8 @@ class Edit_Blog_Artical(LoginRequiredMixin, UpdateView):
     context_object_name = 'sdfs'
 
 
+class DeleteArtical(View):
+    def post(self, request, pk):
+        delObj = get_object_or_404(Blog_artical, pk=pk)
+        delObj.delete()
+        return JsonResponse({'success': True})

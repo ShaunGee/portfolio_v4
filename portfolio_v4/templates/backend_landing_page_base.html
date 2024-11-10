@@ -11,13 +11,13 @@
 <div id="container">
 
     <h2>{% block backend_page_title %}backend_page_title{% endblock backend_page_title %}</h2>
-    <button onclick="window.location.href='{% block url_to_form_page %}{% endblock url_to_form_page %}'">{% block create_button_text %}create_button_text{% endblock create_button_text %}</button>
-    <div id="project_tiles_container">
+    <button id="backend_create_button" onclick="window.location.href='{% block url_to_form_page %}{% endblock url_to_form_page %}'">{% block create_button_text %}create_button_text{% endblock create_button_text %}</button>
+    
         {% block app_tiles %}
 
         {% endblock app_tiles %}
 
-    </div> 
+   
    
 
 </div>
