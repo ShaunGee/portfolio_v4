@@ -96,7 +96,7 @@
 <div id="project_tiles_container">
     {% for blog in blogs %}
      <div class="tile_container">
-        <a class= "tile_link" href="{% url 'blogs:BackEndBlogDetailView' blog.pk %}">
+        <a class= "tile_link" href="{% url 'blogDetailView' blog.pk %}">
             <div class="tile" >
                 <img src= "{{ blog.blog_tile_img.url }}">
                 <h2> {{blog.blog_title}} </h2>
@@ -114,7 +114,7 @@
 <div id="project_tiles_container">
     {% for project in projects %}
     <div class="tile_container">
-        <a class= "tile_link" href="{% url 'projects:BackEndProjectDetailView' project.pk %}">
+        <a class= "tile_link" href="{% url 'projectDetailView' project.pk %}">
             <div class="tile" >
                 <img src= "{{ project.project_artical_image.url }}">
                 <h2> {{project.project_artical_title}} </h2>

@@ -18,6 +18,8 @@ import os
 LOGIN_URL = 'http://127.0.0.1:8000/login/'
 
 
+
+
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
