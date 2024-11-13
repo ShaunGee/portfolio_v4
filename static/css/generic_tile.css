@@ -77,7 +77,7 @@
     }
 
     .tile img{
-        width: auto;
+        width: 200px;
         height: 200px;
         margin: 10px 0 10px 0 ;
     }
@@ -131,7 +131,7 @@
 
 .tile_container{
     width: 30%;
-    height: 500px;
+    height: auto;
     display: flex;
     flex-direction: column;
     background-color: var(--musterd_dark);
@@ -155,8 +155,8 @@
 }
 
 .tile img{
-    width: auto;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin: 30px 0 0 0 ;
 }
 
@@ -205,7 +205,7 @@
 
     .tile_container{
         width: 30%;
-        height: 500px;
+        height: auto;
         display: flex;
         flex-direction: column;
         background-color: var(--musterd_dark);
@@ -230,8 +230,8 @@
     }
     
     .tile img{
-        width: auto;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         margin: 30px 0 0 0 ;
     }
 
